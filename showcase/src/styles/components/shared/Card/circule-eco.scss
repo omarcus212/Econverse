@@ -1,0 +1,14 @@
+.container-circule-eco{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 211px;
+    height: 211px;
+    border-radius: 100%;
+    box-shadow: 0 1px 10px #1b1b1b1a, 0 4px 4px $color-gray;
+     
+    img{
+        width: 117px;
+        height: 34px;
+    }
+}
