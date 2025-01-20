@@ -37,6 +37,7 @@
         }
 
         .btn-checkout {
+            display: flex;
             width: 144px;
             height: 48px;
             font-size: clamp(8px, 16px, 32px);
@@ -45,8 +46,10 @@
             border: none;
             border-radius: 6px;
             color: $color-purple-3;
-            cursor: pointer;
+            justify-content: center;
+            align-items: center;
         }
+
 
     }
 }

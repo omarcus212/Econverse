@@ -9,7 +9,7 @@ const CirculeEco: React.FC<ICirculeEco> = ({img, onClick}) => {
 
     return (
        <div className="container-circule-eco" onClick={onClick}>
-            <img src={img  ? img : "image/Logo.png"} alt="Circule Eco" />
+            <img src={img  ? img : "image/logo.png"} alt="Circule Eco" />
         </div>
 
     )

@@ -1,8 +1,8 @@
-import React from 'react';
 
 export default interface products {
+    id: number,
     productName: string,
     descriptionShort: string,
-    photo: "https://app.econverse.com.br/teste-front-end/junior/tecnologia/fotos-produtos/foto-iphone.png",
+    photo: string,
     price: number
 }

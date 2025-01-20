@@ -1,41 +1,60 @@
-# Getting Started with Create React App
+# **PageHome React Project**
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este projeto é uma aplicação construída em **React**, que implementa uma interface responsiva para exibição de produtos, carrosséis e banners. Inclui funcionalidades como carrosséis navegáveis, categorias de produtos, modal de compra, e navegação por marcas.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## **Pré-requisitos**
 
-### `npm start`
+Certifique-se de ter instalado em sua máquina:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- [Node.js](https://nodejs.org/) (versão 14 ou superior)
+- [npm](https://www.npmjs.com/) (ou [yarn](https://yarnpkg.com/) como alternativa)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+---
 
-### `npm run build`
+## **Instruções de Instalação**
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. **Clone o Repositório:**
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+   git clone <https://github.com/omarcus212/Econverse>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. **Acesse a Pasta do Projeto**
 
-### `npm run eject`
+   cd showcase
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+3. **Instale as Dependências:**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+   npm install
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+4. **Inicie o Servidor Backend**
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+   npm run backend
 
-## Learn More
+5. **Inicie o Servidor de Desenvolvimento**
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+   npm start
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+6. **Gerar a Build de Produção**
+   Para criar uma versão otimizada para produção vc pode utilizar o comando
+   npm run build
+
+## **Scripts Disponíveis**
+
+    npm install: Instala todas as dependências do projeto.
+    npm start: Inicia o aplicativo em modo de desenvolvimento.
+    npm run backend: Executa o backend local.
+    npm run build: Cria a versão otimizada do aplicativo para produção.
+
+## **Funcionalidades Principais**
+
+    Carrossel de Produtos:
+    Modal interativo ao clicar em "Comprar" para um produto.
+
+## **Funcionalidades Principais**
+
+    React (Biblioteca principal)
+    TypeScript (Tipagem estática)
+    SASS (Estilização)
+    Flexbox e Grid (Layouts responsivos)
+    backend local (Para o backend simulado)

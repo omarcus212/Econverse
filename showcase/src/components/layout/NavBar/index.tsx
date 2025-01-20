@@ -1,12 +1,28 @@
 import React, { useEffect, useState } from "react";
 
-const NavBar: React.FC = () => {
+interface INavBar{
+  ClassName?:string,
+  ClassNameText?:string,
+  link?:string,
+  label:string,
+  icon?: string,
+}
+
+const NavBarLink: React.FC<INavBar> = ({ClassName, ClassNameText, link, label, icon}) => {
 
     return (
-        <main>
-          navbar
-        </main>
+        <nav className={ClassName?ClassName:"default-nav"}>
+          <ul>
+            <li>
+         
+              <a href={link} className={ClassNameText}>
+                <img src={icon?icon:""}/>
+                {label}
+                </a>
+            </li>
+          </ul>
+        </nav>
     )
 }
 
-export default NavBar;
+export default NavBarLink;
