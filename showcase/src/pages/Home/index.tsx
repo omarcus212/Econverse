@@ -41,19 +41,19 @@ const PageHome: React.FC = () => {
     setModalOpen(false); 
   };
 
-   const next = () => {
-    if (startIndex + cardsPerView < productData.length) {
-      setStartIndex(startIndex + 1);
-    }
-  };
+  //  const next = () => {
+  //   if (startIndex + cardsPerView < productData.length) {
+  //     setStartIndex(startIndex + 1);
+  //   }
+  // };
 
-  const back = () => {
-    if (startIndex > 0) {
-      setStartIndex(startIndex - 1);
-    }
-  };
+  // const back = () => {
+  //   if (startIndex > 0) {
+  //     setStartIndex(startIndex - 1);
+  //   }
+  // };
 
-   const visibleProducts = productData.slice(startIndex, startIndex + cardsPerView);
+   
 
     return (
       
@@ -98,20 +98,18 @@ const PageHome: React.FC = () => {
       </div>
 
       <div className="list-products">
-        <button className="carousel-button" onClick={back} disabled={startIndex === 0}>
+        <button className="carousel-button" disabled={startIndex === 0}>
           {"<"}
         </button>
-        {visibleProducts.map((product) => (
+        {/* {visibleProducts.map((product) => (
           <CardProduct
             key={product.id}
             product={product}
             onBuyClick={() => handleBuyClick(product)}
           />
-        ))}
+       
         <button
           className="carousel-button"
-          onClick={next}
-          disabled={startIndex + cardsPerView >= productData.length}
         >
           {">"}
         </button>
@@ -132,23 +130,13 @@ const PageHome: React.FC = () => {
       </span>
 
       <div className="list-products">
-        <button className="carousel-button" onClick={back} disabled={startIndex === 0}>
-          {"<"}
-        </button>
-        {visibleProducts.map((product) => (
+        {/* {visibleProducts.map((product) => (
           <CardProduct
             key={product.id}
             product={product}
             onBuyClick={() => handleBuyClick(product)}
           />
-        ))}
-        <button
-          className="carousel-button"
-          onClick={next}
-          disabled={startIndex + cardsPerView >= productData.length}
-        >
-          {">"}
-        </button>
+        ))} */}
       </div>
     </section>
 
@@ -180,20 +168,18 @@ const PageHome: React.FC = () => {
         <Button text="Ver todos" ClassName="btn-type-list" />
       </div>
       <div className="list-products">
-        <button className="carousel-button" onClick={back} disabled={startIndex === 0}>
+        <button className="carousel-button" disabled={startIndex === 0}>
           {"<"}
         </button>
-        {visibleProducts.map((product) => (
+        {/* {visibleProducts.map((product) => (
           <CardProduct
             key={product.id}
             product={product}
             onBuyClick={() => handleBuyClick(product)}
           />
-        ))}
+        ))} */}
         <button
           className="carousel-button"
-          onClick={next}
-          disabled={startIndex + cardsPerView >= productData.length}
         >
           {">"}
         </button>
