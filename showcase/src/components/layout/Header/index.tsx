@@ -56,7 +56,7 @@ const HeaderHome: React.FC = () => {
                 <NavBarLink ClassName="" ClassNameText="" link="" label="Moda"/>
                 <NavBarLink ClassName="" ClassNameText="" link="" label="Lançamentos"/>
                 <NavBarLink ClassName="" ClassNameText="" link="" label="Ofertas do dia"/>
-                <NavBarLink ClassName="" ClassNameText="" link="" icon="icon/crownSimple.svg" label="Assinatura"/>
+                <NavBarLink ClassName="" ClassNameText="" link="" icon="icon/CrownSimple.svg" label="Assinatura"/>
                 </div>
             </div>
         </header>
