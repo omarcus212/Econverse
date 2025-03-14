@@ -51,12 +51,12 @@ const HeaderHome: React.FC = () => {
                     
                 <div className="container-navbar">
                 <NavBarLink ClassName="" ClassNameText="" link="" label="Todas Categorias"/>
-                <NavBarLink ClassName="" ClassNameText="" link="" label="Todas Categorias"/>
-                <NavBarLink ClassName="" ClassNameText="" link="" label="Todas Categorias"/>
-                <NavBarLink ClassName="" ClassNameText="" link="" label="Todas Categorias"/>
-                <NavBarLink ClassName="" ClassNameText="" link="" label="Todas Categorias"/>
-                <NavBarLink ClassName="" ClassNameText="" link="" label="Todas Categorias"/>
-                <NavBarLink ClassName="" ClassNameText="" link="" icon="icon/crownSimple.svg" label="Todas Categorias"/>
+                <NavBarLink ClassName="" ClassNameText="" link="" label="Supermercado"/>
+                <NavBarLink ClassName="" ClassNameText="" link="" label="Livros"/>
+                <NavBarLink ClassName="" ClassNameText="" link="" label="Moda"/>
+                <NavBarLink ClassName="" ClassNameText="" link="" label="Lançamentos"/>
+                <NavBarLink ClassName="" ClassNameText="" link="" label="Ofertas do dia"/>
+                <NavBarLink ClassName="" ClassNameText="" link="" icon="icon/crownSimple.svg" label="Assinatura"/>
                 </div>
             </div>
         </header>

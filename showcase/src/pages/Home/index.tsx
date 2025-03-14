@@ -15,45 +15,44 @@ const PageHome: React.FC = () => {
  const [productData, setproduct] = useState<products[]>([]);
  const [modalOpen, setModalOpen] = useState<boolean>(false); 
  const [selectedProduct, setSelectedProduct] = useState<products | null>(null); 
- const [startIndex, setStartIndex] = useState<number>(0); 
- const cardsPerView = 4;
+ const [current, setCurrent] = useState(0);
+ const itemsPage = 4;
 
   const fetchData = async () => {
-
     const products = await HomePageRequests(); 
-    setproduct(products); 
-
+    if(products){
+      setproduct(products);
+    }
   };
 
-  useEffect(() => {
-
-    fetchData();
-
-  }, []);
-  
     const handleBuyClick = (product: products) => {
     setSelectedProduct(product);
     setModalOpen(true); 
   };
 
-
   const closeModal = () => {
     setModalOpen(false); 
   };
 
-  //  const next = () => {
-  //   if (startIndex + cardsPerView < productData.length) {
-  //     setStartIndex(startIndex + 1);
-  //   }
-  // };
+   const nextSlide = () => {
+    if (current + itemsPage < productData?.length) {
+      setCurrent(current + 1);
+    } else {
+      setCurrent(0); 
+    }
+  };
 
-  // const back = () => {
-  //   if (startIndex > 0) {
-  //     setStartIndex(startIndex - 1);
-  //   }
-  // };
+  const prevSlide = () => {
+    if (current > 0) {
+      setCurrent(current - 1);
+    } else {
+      setCurrent(productData?.length - itemsPage);
+    }
+  };
 
-   
+    useEffect(() => {
+    fetchData();
+  });
 
     return (
       
@@ -82,13 +81,12 @@ const PageHome: React.FC = () => {
     </section>
 
     <section className="container-list-product">
-
       <span className="section-title">
         <hr />
          <h2>Produtos relacionados</h2>
         <hr  />
       </span>
-      
+
       <div className="list-type-products">
         <Button text="ACESSÓRIOS" ClassName="btn-type-list" />
         <Button text="TABLETS" ClassName="btn-type-list" />
@@ -98,22 +96,24 @@ const PageHome: React.FC = () => {
       </div>
 
       <div className="list-products">
-        <button className="carousel-button" disabled={startIndex === 0}>
-          {"<"}
-        </button>
-        {/* {visibleProducts.map((product) => (
-          <CardProduct
-            key={product.id}
-            product={product}
-            onBuyClick={() => handleBuyClick(product)}
-          />
-       
-        <button
-          className="carousel-button"
-        >
-          {">"}
-        </button>
-      </div>
+        <Button img="icon/back-slide.ico" ClassName={productData?.length ? "carousel-button" : "none" } onClick={()=>{nextSlide()}}/>
+          {productData?.length > 0 ? (
+            productData.slice(current, current + itemsPage).map((product) => (
+              <CardProduct
+              key={product.id}
+              product={product}
+              onBuyClick={() => handleBuyClick(product)}
+              />
+          ))
+          ) : (
+          <div className="loader-points">
+              <span></span>
+              <span></span>
+              <span></span>
+          </div>
+        )}
+        <Button img="icon/next-slide.ico" ClassName={productData?.length ? "carousel-button" : "none" } onClick={()=>{prevSlide()}}/>
+     </div>
     </section>
 
     <section className="container-list-bannercard">
@@ -122,7 +122,6 @@ const PageHome: React.FC = () => {
     </section>
 
     <section className="container-list-product">
-      
        <span className="section-title">
         <hr />
          <h2>Produtos relacionados</h2>
@@ -130,13 +129,23 @@ const PageHome: React.FC = () => {
       </span>
 
       <div className="list-products">
-        {/* {visibleProducts.map((product) => (
-          <CardProduct
-            key={product.id}
-            product={product}
-            onBuyClick={() => handleBuyClick(product)}
-          />
-        ))} */}
+       <Button img="icon/back-slide.ico" ClassName={productData?.length ? "carousel-button" : "none" } onClick={()=>{nextSlide()}}/>
+          {productData?.length > 0 ? (
+            productData.slice(current, current + itemsPage).map((product) => (
+              <CardProduct
+              key={product.id}
+              product={product}
+              onBuyClick={() => handleBuyClick(product)}
+              />
+          ))
+          ) : (
+          <div className="loader-points">
+              <span></span>
+              <span></span>
+              <span></span>
+          </div>
+        )}
+        <Button img="icon/next-slide.ico" ClassName={productData?.length ? "carousel-button" : "none" } onClick={()=>{prevSlide()}}/>
       </div>
     </section>
 
@@ -146,43 +155,46 @@ const PageHome: React.FC = () => {
     </section>
 
     <section className="container-list-circule-logo">
-      
        <span className="section-title">
-        <hr />
-         <h2>Navegue por marcas</h2>
-        <hr  />
-      </span>
+          <hr />
+             <h2>Navegue por marcas</h2>
+          <hr  />
+       </span>
 
-      <span>
-        <CirculeEco img="" />
-        <CirculeEco img="" />
-        <CirculeEco img="" />
-        <CirculeEco img="" />
-        <CirculeEco img="" />
-      </span>
+        <span>
+          <CirculeEco img="" />
+          <CirculeEco img="" />
+          <CirculeEco img="" />
+          <CirculeEco img="" />
+          <CirculeEco img="" />
+        </span>
     </section>
 
     <section className="container-list-product">
       <h1 className="section-title">Produtos relacionados</h1>
+
       <div className="list-type-products">
         <Button text="Ver todos" ClassName="btn-type-list" />
       </div>
+
       <div className="list-products">
-        <button className="carousel-button" disabled={startIndex === 0}>
-          {"<"}
-        </button>
-        {/* {visibleProducts.map((product) => (
-          <CardProduct
-            key={product.id}
-            product={product}
-            onBuyClick={() => handleBuyClick(product)}
-          />
-        ))} */}
-        <button
-          className="carousel-button"
-        >
-          {">"}
-        </button>
+        <Button img="icon/back-slide.ico" ClassName={productData?.length ? "carousel-button" : "none" } onClick={()=>{nextSlide()}}/>
+          {productData?.length > 0 ? (
+            productData.slice(current, current + itemsPage).map((product) => (
+              <CardProduct
+              key={product.id}
+              product={product}
+              onBuyClick={() => handleBuyClick(product)}
+              />
+          ))
+          ) : (
+          <div className="loader-points">
+              <span></span>
+              <span></span>
+              <span></span>
+          </div>
+        )}
+        <Button img="icon/next-slide.ico" ClassName={productData?.length ? "carousel-button" : "none" } onClick={()=>{prevSlide()}}/>
       </div>
     </section>
 

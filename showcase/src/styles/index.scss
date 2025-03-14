@@ -15,11 +15,11 @@
     padding: 0;
     box-sizing: border-box;
     font-family: $base-font-family;
-
 }
 
 
 body {
+    overflow-x: hidden;
 
     main{
         width: 100vw;
@@ -55,6 +55,7 @@ body {
     &::-webkit-scrollbar {
         width: 8px;
         height: 10px;
+       
     }
 
     &::-webkit-scrollbar-track {

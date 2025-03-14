@@ -9,7 +9,7 @@ const Routing: React.FC = () => {
     return (
         <BrowserRouter>
                  <Routes>
-                        <Route index path={`${process.env.PUBLIC_URL}/`} element={<PageHome />} />
+                        <Route index path={'/'} element={<PageHome />} />
                     </Routes>   
         </BrowserRouter>
 

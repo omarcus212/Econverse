@@ -1,65 +1,86 @@
 .container-card{
+
     display: flex;
     flex-direction: column;
-    width: 304px;
+    align-items: center;
+    width: 90%;
     height: 500px;
     padding-top: 17px;
     padding-right: 12px;
     padding-left: 13px;
     padding-bottom: 16px;
     border-radius: 8px;
-
     box-shadow: 0 8px 15px #0000001a,0 4px 4px $color-gray;
 
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    
     .card{
+
        display: flex;
        flex-direction: column;
-        width: 278px;
+        width: auto;
         height: 467;
         font-family: "Poppins", serif;
         font-style: normal;
         color: $color-gray-dark;
         gap: 6px;
 
+
+        .container-desc {
+        
+            width: 278px;
+            height: 100%;
+            font-family: "Poppins", serif;
+            font-style: normal;
+            color: $color-gray-dark;
+            gap: 6px;
+        
+          }
+
         img {
+            display: flex;
             width: 100%;
-            height: 228px;
+
         }
 
         .desc-product-text{
+
           font-size: 15px;
           font-weight: lighter;
           letter-spacing: 1px;
           margin-bottom: 12px;
+
         }
 
         .price-text{
+
          font-size: 20px;
          font-weight: bold;
          color: $color-gray-dark;
          margin-bottom: 1px;
+
         }
 
         .oft-text{
+
          font-size: 12px;
          font-weight: lighter;
          letter-spacing: 1px;
          margin-bottom: 8px;
+
         }
 
         .free-shipping{
+
          font-size: 12px;
          font-weight: lighter;
          letter-spacing: 1px;
          color: $color-purple-2;
-        margin-bottom: 12px;
+         margin-bottom: 12px;
+         cursor: pointer;
 
-        cursor: pointer;
         }
 
         .btn-buy{
+
           width: 275px;
           height: 44px;
           background-color: $color-purple-2;
@@ -68,10 +89,8 @@
           font-size: 14px;
           font-weight: bold;
           color: $color-white;
-
           cursor: pointer;
+
         }
     }
-
-    
 }

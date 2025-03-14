@@ -40,9 +40,9 @@ const Modal: React.FC<ModalProps> = ({ product, closeModal}) => {
         <p>{product.descriptionShort}<strong>Veja mais detalhes do produto &gt;</strong></p>
         <span>
           <span className="contt">
-            <img src='icons/minus.ico' onClick={decrementar}/>
+            <img src='icon/minus.ico' onClick={decrementar}/>
             <p>{formatarContador(contador)}</p>
-            <img src='icons/plus.ico' onClick={incrementar}/>
+            <img src='icon/plus.ico' onClick={incrementar}/>
           </span>
           <button className="btn-checkout"> Comprar
         </button>

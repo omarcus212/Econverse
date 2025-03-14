@@ -14,6 +14,7 @@
     margin-bottom: 40px;
 
     .container-info-banner{
+
       height: 100%;
       display: flex;
       flex-direction: column;
@@ -22,8 +23,10 @@
       padding-left: 32px;
       justify-content: center;
       align-items: start;
+      
 
      .main-text{
+
          width: 822px;
          height: 110px;
          font-size: clamp(24px, 48px, 96px);
@@ -31,9 +34,11 @@
          letter-spacing: 1px;
          text-wrap: wrap;
          line-height:48px;
+
      }
 
      .info-text{
+
       font-size: clamp(16px, 32px, 64px);
       font-weight: normal;
       letter-spacing: 1px;
@@ -41,13 +46,16 @@
       margin-bottom: 41px;
 
       strong{
+
          color: $color-yellow;
          font-weight: bolder;
+
       }
 
      }
 
      .btn-checkout{
+
          width: 144px;
          height: 48px;
          font-size: clamp(8px, 16px, 32px);
@@ -61,12 +69,14 @@
      }
 
       .btn-checkout:hover{
-      color: $color-white;
+       color: $color-white;
+
       }
    }       
 }
 
 section>.section-title {
+
    display: flex;
    width: 100%;
    height: auto;
@@ -76,28 +86,32 @@ section>.section-title {
    gap: 10px;
        
    h2{
+
       color: $color-purple-title;
       font-size: clamp(15px, 30px, 60px);
       font-weight: bolder;
    }
 
    hr{
+
       display: flex;
       width: 200px;
       height: 2px;
       background-color: $color-gray;
       border: none;
    }
+
 }
 
 .section-category{
+
    display: flex;
+   justify-content: center;
    height: 171px;
-   padding-left: 140px;
-   padding-right: 140px;
-   gap: 5%;
+   gap: 3%;
 
  .container-icon-card {
+
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -107,6 +121,7 @@ section>.section-title {
       cursor: pointer;
 
       span {
+
          display: flex;
          width: 100%;
          height: 70%;
@@ -123,17 +138,21 @@ section>.section-title {
 
          img:hover {
             color: $color-purple-2;
+
             svg{
                fill: $color-purple-2;
+
             }
          }
       }
 
       p {
+
          font-family: "Poppins", serif;
          font-size: clamp(6px, 14px, 3rem);
          font-weight: bolder;
          font-style: normal;
+
       }
    }
 
@@ -147,22 +166,28 @@ section>.section-title {
 }
 
 .container-list-product{
+
    display: flex;
    flex-direction: column;
    justify-content: center;
    align-items: center;
    width: 100%;
-   height: inherit;
-
+   height: initial;
+   padding: 20px;
    
+ 
    .list-type-products{
+
       display: flex;
+      width: 100%;
       margin-bottom: 24px;
       justify-content: center;
       align-items: center;
       
+      
       .btn-type-list{
-         width: 214px;
+
+         width: 19%;
          height: 40px;
          border: 1px solid $color-gray;
          border-radius: 0;
@@ -172,21 +197,42 @@ section>.section-title {
          font-size: 16px;
          font-family: 'poppins','sans';
          font-weight: normal;
+
       }
 
       .btn-type-list:hover{
          color: $color-purple-title;
+
       }
    }
 
    .list-products{
+      
       display: flex;
       gap: 14px;
       justify-content: center;
       align-items: center;
-      overflow: hidden;
-   
+      width: 100%;
+     
+      
+         .none {
+
+            display: none;
+            opacity: 0;
+            overflow: hidden;
+            z-index: 0;
+
+         }
+      
+         .block {
+
+            display: block;
+            z-index: 1;
+
+         }
+
       .carousel-button{
+
          display: flex;
          width: 32px;
          height: 32px;
@@ -197,22 +243,27 @@ section>.section-title {
          cursor: pointer;
          justify-content: center;
          align-items: center;
-      }
-   }
+         transform: translateY(-50%);
 
+      }
+
+   }
 
 }
 
 .container-list-bannercard {
+
    display: flex;
    flex-direction: row;
    justify-content: center;
    align-items: center;
    gap: 13px;
    margin-bottom: 90px;
+
 }
 
 .container-list-circule-logo{
+
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -225,9 +276,11 @@ section>.section-title {
          flex-direction: row;
          gap: 42px;
       }
+
 }
 
-.container-Modal{
+.container-Modal{  
+
    display: flex;
    position: fixed;
    z-index: 1000;
@@ -239,5 +292,68 @@ section>.section-title {
 
    justify-content: center;
    align-items: center;
+
 }
 
+
+.loader-points {
+
+   outline: 1px solid transparent;
+   font-size: 0px;
+   padding: 0px;
+   display: inline-block;
+   
+}
+
+.loader-points span {
+
+   background: $color-purple-2;
+   border-radius: 100%;
+   vertical-align: middle;
+   display: inline-block;
+   width: 18px;
+   height: 18px;
+   margin: 2px 2px;
+   -webkit-animation: loader-points 0.8s linear infinite alternate;
+   animation: loader-points 0.8s linear infinite alternate;
+}
+
+.loader-points span:nth-child(1) {
+
+   -webkit-animation-delay: -0.8;
+   animation-delay: -0.8s;
+
+}
+
+.loader-points span:nth-child(2) {
+   -webkit-animation-delay: -0.53333s;
+   animation-delay: -0.53333s;
+}
+
+.loader-points span:nth-child(3) {
+
+   -webkit-animation-delay: -0.26666s;
+   animation-delay: -0.26666s;
+}
+
+@keyframes loader-points {
+
+   from {
+      transform: scale(0, 0);
+   }
+
+   to {
+      transform: scale(1, 1);
+   }
+}
+
+@-webkit-keyframes loader-points {
+
+   from {
+      -webkit-transform: scale(0, 0);
+   }
+
+   to {
+      -webkit-transform: scale(1, 1);
+   }
+}

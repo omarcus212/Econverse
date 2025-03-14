@@ -2,13 +2,9 @@
 
 # dependencies
 /node_modules
-/.pnp
-.pnp.js
 
 # testing
 /coverage
-
-
 
 # misc
 .DS_Store
@@ -22,3 +18,4 @@ yarn-debug.log*
 yarn-error.log*
 
 .env
+.vercel

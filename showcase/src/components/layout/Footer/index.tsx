@@ -64,7 +64,6 @@ const Footer: React.FC = () => {
             </span>
             </div>
            </div>
-          <p className="text-final">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
        </footer>
     )
 }
