@@ -56,6 +56,7 @@ Certifique-se de ter instalado em sua máquina:
     npm start: Inicia o aplicativo em modo de desenvolvimento.
     npm run backend: Executa o backend local.
     npm run build: Cria a versão otimizada do aplicativo para produção.
+    server -s build: é utilizado para servir a versão estática do projeto React em produção.
 
 ## **Funcionalidades Principais**
 
