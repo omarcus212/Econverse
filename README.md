@@ -53,7 +53,7 @@ Certifique-se de ter instalado em sua máquina:
     Carrossel de Produtos:
     Modal interativo ao clicar em "Comprar" para um produto.
 
-## **Funcionalidades Principais**
+## **Tecnologias Principais**
 
     React (Biblioteca principal)
     TypeScript (Tipagem estática)
