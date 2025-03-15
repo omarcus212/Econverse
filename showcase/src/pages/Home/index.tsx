@@ -171,10 +171,14 @@ const PageHome: React.FC = () => {
     </section>
 
     <section className="container-list-product">
-      <h1 className="section-title">Produtos relacionados</h1>
+       <span className="section-title">
+        <hr />
+         <h2>Produtos relacionados</h2>
+        <hr  />
+      </span>
 
       <div className="list-type-products">
-        <Button text="Ver todos" ClassName="btn-type-list" />
+        <Button text="Ver todos" ClassName="btn-all-list" />
       </div>
 
       <div className="list-products">

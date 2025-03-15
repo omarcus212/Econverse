@@ -16,8 +16,8 @@ const Footer: React.FC = () => {
 
             <span className="input-send">
                 <span>
-                    <Input type="text" ClassName="input-subscribe"/>
-                    <Input type="text" ClassName="input-subscribe"/>
+                    <Input type="text" placeholder="Digite seu nome" ClassName="input-subscribe"/>
+                    <Input type="text" placeholder="Digite seu e-mail" ClassName="input-subscribe"/>
                     <Button text="INSCREVER" ClassName="btn-send"/>
                 </span>
                 <span >
@@ -29,10 +29,10 @@ const Footer: React.FC = () => {
            </div>
 
            <div className="social">
-            <span>
+            <span className="social_network_social">
                 <ImgIcon img="image/logo.png" className=""/>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                <span>
+                <span className="img_network">
                     <ImgIcon img="svg/instagram.svg"/>
                     <ImgIcon img="svg/facebook.svg"/>
                     <ImgIcon img="svg/linkedin.svg"/>
@@ -40,7 +40,6 @@ const Footer: React.FC = () => {
             </span>
          
          <div className="social-list">
-
 
             <span className="list-description">
                 <h3>Institucional</h3>

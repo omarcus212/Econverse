@@ -65,12 +65,13 @@
 
         h3 {
             width: 328px;
-            height: 5px;
+            min-height: 5px;
+            height: auto;
             font-size: clamp(10px, 20px, 40px);
             font-weight: normal;
             letter-spacing: 4px;
             text-decoration: none;
-            text-wrap: nowrap;
+            text-wrap: wrap;
         }
 
         strong {
@@ -116,6 +117,7 @@
             border: none;
             border-radius: 6px;
             color: $color-purple-3;
+            text-transform: uppercase;
             
         }
 

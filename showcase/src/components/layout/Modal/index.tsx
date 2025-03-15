@@ -10,14 +10,13 @@ interface ModalProps {
 
 const Modal: React.FC<ModalProps> = ({ product, closeModal}) => {
 
-   const [contador, setContador] = useState<number>(1);
+  const formateValue = (product.price / 10).toLocaleString('pt-BR', { minimumFractionDigits: 2 })
+  const [contador, setContador] = useState<number>(1);
 
-  // Função para incrementar o contador
   const incrementar = () => {
     setContador(contador + 1);
   };
 
-  // Função para decrementar o contador
   const decrementar = () => {
     if (contador > 1) {
       setContador(contador - 1);
@@ -36,7 +35,7 @@ const Modal: React.FC<ModalProps> = ({ product, closeModal}) => {
       </div>
       <div className="product-info">
         <h3>{product.productName}</h3>
-        <strong>{product.price}</strong>
+        <strong>R$ {formateValue}</strong>
         <p>{product.descriptionShort}<strong>Veja mais detalhes do produto &gt;</strong></p>
         <span>
           <span className="contt">

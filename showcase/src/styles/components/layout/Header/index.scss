@@ -14,17 +14,17 @@
 
     .container-info-top {
       display: flex;
-      width: 764px;
-      height: 20px;
-      justify-content: space-between;
+      width: 100%;
+      height: 50px;
+      justify-content: space-evenly;
       align-items: center;
-      margin-bottom: 18px;
+      padding-left: 50px;
+      flex-wrap: wrap;
 
       .container-top-textIcon {
         display: flex;
         width: auto;
         height: 100%;
-        flex-direction: row;
         font-size: clamp(10px, 12px, 18px);
         font-family: "Poppins", serif;
         font-weight: 600;
@@ -40,6 +40,8 @@
 
         .NormalText {
           color: $color-gray;
+          text-wrap: auto;
+          text-align: start;
         }
 
         .PurpleText {
@@ -142,6 +144,7 @@
       height: 20px;
       flex-direction: row;
       margin-top: 18px;
+      border-top: 1px solid $color-gray;
       
       .nav-link{
         display: flex;
