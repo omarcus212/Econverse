@@ -40,6 +40,8 @@ Certifique-se de ter instalado em sua máquina:
 6. **Gerar a Build de Produção**
    Para criar uma versão otimizada para produção vc pode utilizar o comando
    npm run build
+   npm i -g server
+   server -s build
 
 ## **Scripts Disponíveis**
 
