@@ -1,10 +1,12 @@
-# **PageHome React Project**
+# Econverse
+
+ **PageHome React Project**
 
 Este projeto é uma aplicação construída em **React**, que implementa uma interface responsiva para exibição de produtos, carrosséis e banners. Inclui funcionalidades como carrosséis navegáveis, categorias de produtos, modal de compra, e navegação por marcas.
 
 ---
 
-## **Pré-requisitos**
+ **Pré-requisitos**
 
 Certifique-se de ter instalado em sua máquina:
 
@@ -13,31 +15,40 @@ Certifique-se de ter instalado em sua máquina:
 
 ---
 
-## **Instruções de Instalação**
+ **Configuração do Arquivo .env**
+ 
+  Para garantir o correto funcionamento do projeto, é necessário criar um arquivo .env na raiz do projeto. Para facilitar, deixei 
+  um arquivo env.example com as variáveis necessárias.
+  
+ **Instruções de Instalação**
 
 1. **Clone o Repositório:**
 
-   git clone <https://github.com/omarcus212/Econverse>
+    git clone <https://github.com/omarcus212/Econverse>
 
 2. **Acesse a Pasta do Projeto**
 
-   cd showcase
+    cd showcase
 
 3. **Instale as Dependências:**
 
-   npm install
+    npm install
 
 4. **Inicie o Servidor Backend**
 
-   npm run backend
+    npm run backend
 
-5. **Inicie o Servidor de Desenvolvimento**
+6. **Inicie o Servidor de Desenvolvimento**
 
-   npm start
+    npm start
+    A aplicação estará disponível em http://localhost:3000 (ou outra porta configurada).
 
-6. **Gerar a Build de Produção**
+7. **Gerar a Build de Produção**
    Para criar uma versão otimizada para produção vc pode utilizar o comando
    npm run build
+   npm i -g server
+   server -s build
+   A aplicação estará disponível em http://localhost:5000.
 
 ## **Scripts Disponíveis**
 
@@ -49,9 +60,9 @@ Certifique-se de ter instalado em sua máquina:
 ## **Funcionalidades Principais**
 
     Carrossel de Produtos:
-    Modal interativo.
+    Modal interativa.
 
-## **Funcionalidades Principais**
+## **Tecnologias Principais**
 
     React (Biblioteca principal)
     TypeScript (Tipagem estática)
