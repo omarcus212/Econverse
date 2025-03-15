@@ -26,7 +26,7 @@
 
             .label-description p{
 
-                width: 394px;
+              
                 font-size: 14px;
                 font-family: "Poppins", serif;
                 font-weight: lighter;
@@ -40,6 +40,8 @@
             display: flex;
             flex-direction: column;
             gap: 26px;
+
+        
         }
     }
   }
@@ -93,6 +95,83 @@
                     display: flex;
                     flex-direction: column;
                     
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1160px) {
+
+    body {
+
+        .container-card{
+            padding: 0;
+            width: auto;
+            height: auto;
+            
+        }
+
+        .list-products{
+          position: relative;
+         overflow: scroll;
+        }
+
+        .list-products .carousel-button:first-child{
+            position: absolute;
+            left: 0;
+            z-index: 1;
+            
+        }
+
+        .list-products .carousel-button:last-child {
+            position: absolute;
+            right: 0;
+            z-index: 1;
+           
+        }
+
+        footer {
+            
+            .container-subscribe {
+
+                width: auto;
+                font-size: clamp(4px, 2rem, 8px);
+
+                .label-description h2 {
+
+                    font-size: 18px;
+                    font-family: "Poppins", serif;
+                    font-weight: lighter;
+
+                }
+
+                .label-description p {
+
+
+                    font-size: 8px;
+                    font-family: "Poppins", serif;
+                    font-weight: lighter;
+
+                }
+            }
+
+            .social {
+
+                font-size: clamp(3px, 5px, 6px);
+                display: flex;
+                flex-direction: row;
+                gap: 26px;
+
+                .social-list{
+                   width: 50%;
+
+                }
+
+                .social-list .list-description p{
+                    width: 100%;
+                    font-size: 10px;
+                    margin-left: 2px;
                 }
             }
         }

@@ -92,13 +92,11 @@
     height: 282px;
     padding-top: 60px;
     padding-left: 80px;
-    padding-right: 190px;
-    padding-bottom: 60px;
 
     span {
         display: flex;
         flex-direction: column;
-        width: 45%;
+        width: 20%;
         height: 159px;
         gap: 22px;
 
@@ -127,27 +125,33 @@
 
     .social-list{
         display: flex;
-        width: 35%;
+        width: 70%;
         height: auto;
-        padding-left: 18px;
-        border-left: $color-gray-dark 1px solid;
+        justify-content: space-evenly;
+    
 
     .list-description {
-        width: 50%;
         color: $color-gray-dark;
+     
 
         h3 {
-            width: 104px;
             font-size: clamp(8px, 16px, 32px);
             font-family: "Poppins", serif;
             font-weight: bold;
         }
 
         p {
+            width: auto;
             font-size: clamp(8px, 16px, 32px);
             font-family: "Work Sans", serif;
             font-weight: normal;
         }
     }
+  }
+
+  .social-list .list-description:first-child{
+    border-left: 1px solid $color-gray-dark;
+    padding-left: 10px;
+
   }
 }
